@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <bundle id="com.eclipsesource.modelserver.coffee.model" version="0.0.1.qualifier">
+      <category name="com.eclisesource.modelserver"/>
+   </bundle>
+   <category-def name="com.eclisesource.modelserver" label="ModelServer"/>
+   <repository-reference location="http://https://download.eclipse.org/tools/orbit/downloads/drops/R20181128170323/repository/" enabled="true" />
+   <repository-reference location="http://download.eclipse.org/jetty/updates/jetty-bundles-9.x/9.4.15.v20190215" enabled="true" />
+</site>
