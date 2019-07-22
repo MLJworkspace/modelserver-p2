@@ -25,25 +25,11 @@
 
 	<property name="local.p2.repository" value="target/repository" />
 
-	<target name="getMajorMinorVersion">
-		<script language="javascript">
-			<![CDATA[
-
-	                // getting the value
-	                buildnumber = project.getProperty("unqualifiedVersion");
-	                index = buildnumber.lastIndexOf(".");
-	                counter = buildnumber.substring(0, index);
-	    			project.setProperty("majorMinorVersion",counter);
-
-	            ]]>
-		</script>
-	</target>
-
 	<!-- Take from the remote URL the possible existing metadata -->
-	<target name="get-composite-metadata" depends="getMajorMinorVersion" >
+	<target name="get-composite-metadata"  >
 		<echo>${bintray.user}</echo>
 		<get-metadata url="${main.composite.url}" dest="${target}/${main.composite.repository.directory}" />
-		<get-metadata url="${main.composite.url}/${majorMinorVersion}" dest="${target}/${composite.repository.directory}" />
+		<get-metadata url="${main.composite.url}/${bintray.majorminorversion}" dest="${target}/${composite.repository.directory}" />
 		<antcall target="preprocess-metadata" />
 	</target>
 
@@ -121,7 +107,7 @@
 	</target>
 
 
-	<target name="push-composite-to-bintray" depends="getMajorMinorVersion" >
+	<target name="push-composite-to-bintray" >
 		<apply executable="curl" parallel="false" relative="true" addsourcefile="false">
 			<arg value="-XPUT" />
 			<targetfile />
@@ -132,7 +118,7 @@
 				<mergemapper to="-T" />
 				<globmapper from="*" to="${target}/${composite.repository.directory}/*" />
 				<mergemapper to="-u${bintray.user}:${bintray.apikey}" />
-				<globmapper from="*" to="https://api.bintray.com/content/${bintray.owner}/${bintray.repo}/${bintray.composite.path}/${majorMinorVersion}/*;publish=1" />
+				<globmapper from="*" to="https://api.bintray.com/content/${bintray.owner}/${bintray.repo}/${bintray.composite.path}/${bintray.majorminorversion}/*;publish=1" />
 			</compositemapper>
 		</apply>
 	</target>

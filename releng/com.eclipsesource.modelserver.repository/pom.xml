@@ -29,6 +29,7 @@
 		<!-- note that the following must be consistent with the path schema used 
 			to publish child composite repositories and actual released p2 repositories -->
 		<child.repository.path.prefix>../../snapshots/</child.repository.path.prefix>
+		<bintray.majorminorversion>0.0</bintray.majorminorversion>
 	</properties>
 
 	<profiles>
