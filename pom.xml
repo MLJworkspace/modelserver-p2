@@ -16,8 +16,8 @@
 		<tychoExtrasVersion>1.4.0</tychoExtrasVersion>
 		<maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.source>1.8</java.source>
-		<java.target>1.8</java.target>
+		<java.source>11</java.source>
+		<java.target>11</java.target>
 		<project.build.java.target>1.8</project.build.java.target>
 		<target.version>0.0.1-SNAPSHOT</target.version>
 		<xtend.version>2.15.0</xtend.version>

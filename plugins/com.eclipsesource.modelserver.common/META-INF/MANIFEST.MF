@@ -5,7 +5,7 @@ Bundle-SymbolicName: com.eclipsesource.modelserver.common
 Bundle-Version: 0.0.1.qualifier
 Bundle-Vendor: EclipseSource
 Automatic-Module-Name: com.eclipsesource.modelserver.common
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: com.google.inject;bundle-version="3.0.0";visibility:=reexport,
  com.google.gson;bundle-version="2.7.0";visibility:=reexport,
  com.fasterxml.jackson.core.jackson-databind;bundle-version="2.9.1";visibility:=reexport,
