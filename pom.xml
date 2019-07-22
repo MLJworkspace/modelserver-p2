@@ -25,6 +25,9 @@
 
 	<modules>
 		<module>plugins/com.eclipsesource.modelserver.coffee.model</module>
+		<module>plugins/com.eclipsesource.modelserver.client</module>
+		<module>plugins/com.eclipsesource.modelserver.common</module>
+		<module>plugins/com.squareup.okhttp3</module>
 		<module>releng</module>
 	</modules>
 

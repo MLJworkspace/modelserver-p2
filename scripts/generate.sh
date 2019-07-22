@@ -37,7 +37,8 @@ fi
 
 echo '# Download & copy glsp snapshot sourcecode to plugin'
 copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.coffee.model $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.coffee.model/src
-
+copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.client $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.client/src
+copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.common $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.common/src
 
 echo '# Copy coffe ecore resources and adapt gen package path'
 copy_resource  com.eclipsesource.modelserver com.eclipsesource.modelserver.coffee.model $MS_VERSION Coffee.ecore $PLUGIN_DIR/com.eclipsesource.modelserver.coffee.model/model
@@ -59,10 +60,10 @@ echo ""
 # mvn clean install
 
 # cd ..
-echo "# Build p2 repository. (Deploy if non-local)"
-if [ $LOCAL_BUILD == true ]
-then
-    mvn clean install
-else
-    mvn clean install -Pdeploy-composite
-fi
+# echo "# Build p2 repository. (Deploy if non-local)"
+# if [ $LOCAL_BUILD == true ]
+# then
+#     mvn clean install
+# else
+#     mvn clean install -Pdeploy-composite
+# fi

@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Modelserver Common
+Bundle-SymbolicName: com.eclipsesource.modelserver.common
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: EclipseSource
+Automatic-Module-Name: com.eclipsesource.modelserver.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.inject;bundle-version="3.0.0";visibility:=reexport,
+ com.google.gson;bundle-version="2.7.0";visibility:=reexport,
+ com.fasterxml.jackson.core.jackson-databind;bundle-version="2.9.1";visibility:=reexport,
+ com.fasterxml.jackson.core.jackson-core;bundle-version="2.9.1";visibility:=reexport,
+ org.eclipse.emf.ecore;bundle-version="2.17.0"
+Bundle-ClassPath: .
