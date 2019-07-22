@@ -35,7 +35,7 @@ then
     export BINTRAY_QUALIFIER=${MS_SNAPSHOT_VERSION/"${MS_VERSION/-SNAPSHOT}"-}
 fi
 
-echo '# Download & copy glsp snapshot sourcecode to plugin'
+echo '# Download & copy Modelesrever snapshot sourcecode to plugin'
 copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.coffee.model $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.coffee.model/src
 copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.client $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.client/src
 copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.common $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.common/src
@@ -49,21 +49,15 @@ sed -i 's=/com.eclipsesource.modelserver.coffee.model/src/main/java=/com.eclipse
 
 echo "# Update plugin metadata (export packages)"
 update_metadata com.eclipsesource.modelserver.coffee.model
-
+update_metadata com.eclipsesource.modelserver.client --rootExport
 
 echo "# P2 Code genereation successful!"
 cd $SCRIPT_DIR/..
 
-echo ""
-# echo "# Regenerate targetplatform from .tpd file"
-# cd targetplatforms
-# mvn clean install
-
-# cd ..
-# echo "# Build p2 repository. (Deploy if non-local)"
-# if [ $LOCAL_BUILD == true ]
-# then
-#     mvn clean install
-# else
-#     mvn clean install -Pdeploy-composite
-# fi
+echo "# Build p2 repository. (Deploy to bintray if non-local)"
+if [ $LOCAL_BUILD == true ]
+then
+    mvn clean install
+else
+    mvn clean install -Pdeploy-composite
+fi
