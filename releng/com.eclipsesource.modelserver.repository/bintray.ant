@@ -29,7 +29,7 @@
 	<target name="get-composite-metadata"  >
 		<echo>${bintray.user}</echo>
 		<get-metadata url="${main.composite.url}" dest="${target}/${main.composite.repository.directory}" />
-		<get-metadata url="${main.composite.url}/${bintray.majorminorversion}" dest="${target}/${composite.repository.directory}" />
+		<get-metadata url="${main.composite.url}/${bintray.majorminor}" dest="${target}/${composite.repository.directory}" />
 		<antcall target="preprocess-metadata" />
 	</target>
 
@@ -118,7 +118,7 @@
 				<mergemapper to="-T" />
 				<globmapper from="*" to="${target}/${composite.repository.directory}/*" />
 				<mergemapper to="-u${bintray.user}:${bintray.apikey}" />
-				<globmapper from="*" to="https://api.bintray.com/content/${bintray.owner}/${bintray.repo}/${bintray.composite.path}/${bintray.majorminorversion}/*;publish=1" />
+				<globmapper from="*" to="https://api.bintray.com/content/${bintray.owner}/${bintray.repo}/${bintray.composite.path}/${bintray.majorminor}/*;publish=1" />
 			</compositemapper>
 		</apply>
 	</target>
