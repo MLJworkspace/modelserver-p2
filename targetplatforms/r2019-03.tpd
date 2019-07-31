@@ -1,4 +1,4 @@
-target "2019-03 - Release" with source,requirements
+target "2019-03 - Release" with source, requirements
 
 location "http://download.eclipse.org/releases/2019-03" {
 	org.eclipse.platform.feature.group
@@ -23,6 +23,5 @@ location "https://download.eclipse.org/tools/orbit/downloads/drops/R201811281703
 
 // EMF-JSON
 location "http://ghillairet.github.io/p2" {
-	com.fasterxml.jackson.core.jackson-core
-	com.fasterxml.jackson.core.jackson-databind
+	org.emfjson.jackson
 }

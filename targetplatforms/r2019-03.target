@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
-<target name="2019-03 - Release" sequenceNumber="1563783925">
+<target name="2019-03 - Release" sequenceNumber="1564563366">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.platform.feature.group" version="4.11.0.v20190307-0500"/>
@@ -25,8 +25,7 @@
       <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20181128170323/repository/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="com.fasterxml.jackson.core.jackson-core" version="2.9.1"/>
-      <unit id="com.fasterxml.jackson.core.jackson-databind" version="2.9.1"/>
+      <unit id="org.emfjson.jackson" version="1.2.0"/>
       <repository location="http://ghillairet.github.io/p2"/>
     </location>
   </locations>

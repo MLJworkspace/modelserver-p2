@@ -6,7 +6,7 @@
       <package
             class="com.eclipsesource.modelserver.coffee.model.coffee.CoffeePackage"
             genModel="model/Coffee.genmodel"
-            uri="http://www.eclipsesource.com/coffee/model">
+            uri="http://www.eclipsesource.com/modelserver/example/coffeemodel">
       </package>
    </extension>
 
