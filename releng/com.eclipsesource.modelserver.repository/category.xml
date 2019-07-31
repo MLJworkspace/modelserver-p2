@@ -3,10 +3,15 @@
    <bundle id="com.eclipsesource.modelserver.client" version="0.0.1.qualifier">
       <category name="com.eclisesource.modelserver"/>
    </bundle>
+   <bundle id="com.eclipsesource.modelserver.client.source" version="0.0.1.qualifier"/>
    <bundle id="com.eclipsesource.modelserver.coffee.model" version="0.0.1.qualifier">
       <category name="com.eclisesource.modelserver"/>
    </bundle>
-   <bundle id="com.eclipsesource.modelserver.common" version="0.0.1.qualifier"/>
+      <bundle id="com.eclipsesource.modelserver.coffee.model.source" version="0.0.1.qualifier"/>
+   <bundle id="com.eclipsesource.modelserver.common" version="0.0.1.qualifier">
+      <category name="com.eclisesource.modelserver"/>
+   </bundle>
+      <bundle id="com.eclipsesource.modelserver.common.source" version="0.0.1.qualifier"/>
    <bundle id="com.squareup.okhttp3" version="0.0.1.qualifier"/>
    <category-def name="com.eclisesource.modelserver" label="ModelServer"/>
    <repository-reference location="http://https://download.eclipse.org/tools/orbit/downloads/drops/R20181128170323/repository/" enabled="true" />
