@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="com.eclipsesource.modelserver.command.CCommandPackage"
+            genModel="model/Command.genmodel"
+            uri="http://www.eclipsesource.com/schema/2019/modelserver/command">
+      </package>
+   </extension>
+
+</plugin>

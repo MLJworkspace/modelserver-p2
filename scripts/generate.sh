@@ -39,10 +39,14 @@ echo '# Download & copy Modelesrever snapshot sourcecode to plugin'
 copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.coffee.model $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.coffee.model/src
 copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.client $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.client/src
 copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.common $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.common/src
+copy_sourcecode com.eclipsesource.modelserver com.eclipsesource.modelserver.edit $MS_VERSION $PLUGIN_DIR/com.eclipsesource.modelserver.edit/src
 
 echo '# Copy coffe ecore resources and adapt gen package path'
 copy_resource  com.eclipsesource.modelserver com.eclipsesource.modelserver.coffee.model $MS_VERSION Coffee.ecore $PLUGIN_DIR/com.eclipsesource.modelserver.coffee.model/model
 copy_resource  com.eclipsesource.modelserver com.eclipsesource.modelserver.coffee.model $MS_VERSION Coffee.genmodel $PLUGIN_DIR/com.eclipsesource.modelserver.coffee.model/model
+
+copy_resource  com.eclipsesource.modelserver com.eclipsesource.modelserver.edit $MS_VERSION Command.ecore $PLUGIN_DIR/com.eclipsesource.modelserver.edit/model
+copy_resource  com.eclipsesource.modelserver com.eclipsesource.modelserver.edit $MS_VERSION Command.genmodel $PLUGIN_DIR/com.eclipsesource.modelserver.edit/model
 
 sed -i 's=/com.eclipsesource.modelserver.coffee.model/src/main/java=/com.eclipsesource.modelserver.coffee.model/src/=g' $PLUGIN_DIR/com.eclipsesource.modelserver.coffee.model/model/Coffee.genmodel
 

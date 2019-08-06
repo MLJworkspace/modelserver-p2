@@ -23,5 +23,5 @@ location "https://download.eclipse.org/tools/orbit/downloads/drops/R201811281703
 
 // EMF-JSON
 location "http://ghillairet.github.io/p2" {
-	org.emfjson.jackson
+	org.emfjson.jackson lazy
 }
